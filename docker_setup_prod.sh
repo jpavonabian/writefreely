@@ -36,6 +36,10 @@ else
   echo "docker-compose.yml already exists. Skipping download."
 fi
 
+# Prompt the user to edit the docker-compose.yml file
+echo "Before continuing, you must edit the docker-compose.yml file to configure the database connection details."
+read -p "Press Enter when you have finished editing the file."
+
 # Run the initial command for interactive configuration
 echo "Starting WriteFreely configuration..."
 docker compose run -it --rm app writefreely config start
