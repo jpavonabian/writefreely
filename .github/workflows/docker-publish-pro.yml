@@ -67,7 +67,7 @@ jobs:
           # Context is the root directory
           context: .
           # Use the production Dockerfile
-          dockerfile: dockerfile.prod
+          file: Dockerfile: dockerfile.prod
           # Set platforms for multi-architecture builds
           platforms: linux/amd64,linux/arm64
           # Push the image unless it's a pull request
